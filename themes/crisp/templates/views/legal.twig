@@ -1,91 +1,86 @@
 {# 
- # Copyright 2020 Pixelcat Productions <support@pixelcatproductions.net>
- # @author 2020 Justin René Back <jback@pixelcatproductions.net>
+ # Copyright (C) 2021 Justin René Back <justin@tosdr.org>
  #
- # Licensed under the Apache License, Version 2.0 (the "License");
- # you may not use this file except in compliance with the License.
- # You may obtain a copy of the License at
+ # This program is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation, either version 3 of the License, or
+ # (at your option) any later version.
  #
- #      http://www.apache.org/licenses/LICENSE-2.0
+ # This program is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU General Public License for more details.
  #
- # Unless required by applicable law or agreed to in writing, software
- # distributed under the License is distributed on an "AS IS" BASIS,
- # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- # See the License for the specific language governing permissions and
- # limitations under the License.
+ # You should have received a copy of the GNU General Public License
+ # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #}
 
-
-{#
-Die Variablen unten sind sehr wichtig bitte bei jeder Datei setzen!
-    - JB
-#}
 {% set currentPage = 'legal' %}
 {% set pageTitle = 'views.legal.title'|translate %}
 {% set error = false %}
 
 
-
 {% extends "base.twig" %}
 
 {% block content %}
-  {{ include("components/navbar.twig") }}
+    <!-- 20x000032 -->
+    {{ include("components/navbar.twig") }}
 
-  <div class="jumbotron" id="api">
-    <div><h1>{{ 'views.legal.title'|translate }}</h1></div>
-    <p>
-      {{ 'views.legal.jumbotron.text'|translate|raw }}
-    </p>
-  </div>
-
-
-  <div class="container">
+    <div class="jumbotron" id="api">
+        <div><h1>{{ 'views.legal.title'|translate }}</h1></div>
+        <p>
+            {{ 'views.legal.jumbotron.text'|translate|raw }}
+        </p>
+    </div>
 
 
-    <h2>{{ 'views.legal.container.privacy.header'|translate }}</h2>
-    <p>
-      {{ 'views.legal.container.privacy.text'|translate|raw }}
-    </p>
+    <div class="container">
 
 
-    <h2>{{ 'views.legal.container.terms.header'|translate }}</h2>
-    <p>
-      {{ 'views.legal.container.terms.text'|translate|raw }}
-    </p>
-    <p>
-      <b>{{ 'views.legal.container.copyright.header'|translate }}</b><br>
-      {{ 'views.legal.container.copyright.text.top'|translate|raw }}
-      {{ 'views.legal.container.copyright.text.bottom'|translate|raw }}
-    </p>
-    <ul>
-      <li>
-        <a href="{{ generateLink("http://creativecommons.org/licenses/by-sa/3.0/", true) }}">http://creativecommons.org/licenses/by-sa/3.0/</a>
-      </li>
-      <li>
-        <a href="{{ generateLink("http://www.gnu.org/licenses/agpl-3.0-standalone.html", true) }}">http://www.gnu.org/licenses/agpl-3.0-standalone.html</a>
-      </li>
-    </ul>
+        <h2>{{ 'views.legal.container.privacy.header'|translate }}</h2>
+        <p>
+            {{ 'views.legal.container.privacy.text'|translate|raw }}
+        </p>
 
 
-    <p>
-      <b>{{ 'views.legal.container.contributor.header'|translate }}</b><br>
-      {{ 'views.legal.container.contributor.text'|translate|raw }}
-    </p>
+        <h2>{{ 'views.legal.container.terms.header'|translate }}</h2>
+        <p>
+            {{ 'views.legal.container.terms.text'|translate|raw }}
+        </p>
+        <p>
+            <b>{{ 'views.legal.container.copyright.header'|translate }}</b><br>
+            {{ 'views.legal.container.copyright.text.top'|translate|raw }}
+            {{ 'views.legal.container.copyright.text.bottom'|translate|raw }}
+        </p>
+        <ul>
+            <li>
+                <a href="{{ generateLink("http://creativecommons.org/licenses/by-sa/3.0/", true) }}">http://creativecommons.org/licenses/by-sa/3.0/</a>
+            </li>
+            <li>
+                <a href="{{ generateLink("http://www.gnu.org/licenses/agpl-3.0-standalone.html", true) }}">http://www.gnu.org/licenses/agpl-3.0-standalone.html</a>
+            </li>
+        </ul>
 
-    <p>
-      <b>{{ 'views.legal.container.changes.header'|translate }}</b><br>
-      {{ 'views.legal.container.changes.text'|translate|raw }}
-    </p>
 
-    <p>
-    <p><b>{{ 'views.legal.container.votes.header'|translate }}</b><br>
-      {{ 'views.legal.container.votes.text'|translate|raw }}
-    </p>
+        <p>
+            <b>{{ 'views.legal.container.contributor.header'|translate }}</b><br>
+            {{ 'views.legal.container.contributor.text'|translate|raw }}
+        </p>
 
-    <p>
-      <b>{{ 'views.legal.container.team.header'|translate }}</b><br>
-      {{ 'views.legal.container.team.text'|translate|raw }}
-    </p>
+        <p>
+            <b>{{ 'views.legal.container.changes.header'|translate }}</b><br>
+            {{ 'views.legal.container.changes.text'|translate|raw }}
+        </p>
 
-  </div> <!-- /container -->
+        <p>
+        <p><b>{{ 'views.legal.container.votes.header'|translate }}</b><br>
+            {{ 'views.legal.container.votes.text'|translate|raw }}
+        </p>
+
+        <p>
+            <b>{{ 'views.legal.container.team.header'|translate }}</b><br>
+            {{ 'views.legal.container.team.text'|translate|raw }}
+        </p>
+
+    </div> <!-- /container -->
 {% endblock %}

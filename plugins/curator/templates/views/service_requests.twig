@@ -1,0 +1,102 @@
+{# 
+ # Copyright (C) 2021 Justin René Back <justin@tosdr.org>
+ #
+ # This program is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation, either version 3 of the License, or
+ # (at your option) any later version.
+ #
+ # This program is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU General Public License for more details.
+ #
+ # You should have received a copy of the GNU General Public License
+ # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#}
+
+{% set currentPage = 'service_requests' %}
+{% set pageTitle = plugin.getTranslation('views.service_requests.header') %}
+{% set error = false %}
+
+
+
+{% extends plugin.PluginName ~  "/templates/base.twig" %}
+
+{% block content %}
+    {% include plugin.PluginName ~  "/templates/components/navbar.twig" %}
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+            <h1 class="display-4">{{ plugin.getTranslation('views.service_requests.header') }}</h1>
+        </div>
+    </div>
+
+    <div class="container-fluid table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>{{ plugin.getTranslation('views.service_requests.table.th.service_name') }}</th>
+                    <th>{{ plugin.getTranslation('views.service_requests.table.th.service_domains') }}</th>
+                    <th>{{ plugin.getTranslation('views.service_requests.table.th.service_documents') }}</th>
+                    <th>{{ plugin.getTranslation('views.service_requests.table.th.service_wikipedia') }}</th>
+                    <th>{{ plugin.getTranslation('views.service_requests.table.th.service_actions') }}</th>
+                    <th><i class="fas fa-envelope-open-text"></i></th>
+                    <th><i class="fas fa-sticky-note"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for request in requests %}
+                    <tr id="request-{{ request.id }}">
+                        <td>{{ request.name }}</td>
+                        <td>{{ request.domains }}</td>
+                        <td>{{ prettyDump(request.documents|json_decode) }}</td>
+                        <td>{{ request.wikipedia }}</td>
+                        <td>
+                            <div class="btn-group">
+                                <button type="button" data-id="{{ request.id }}" name="approve" class="btn btn-success">{{ plugin.getTranslation('views.service_requests.table.td.button.approve') }}</button>
+                                <button type="button" data-id="{{ request.id }}" name="reject" class="btn btn-danger">{{ plugin.getTranslation('views.service_requests.table.td.button.reject') }}</button>
+                            </div> 
+                        </td>
+                        <td>{{ (request.email ? '<i class="fas fa-check"></i>'|raw : '<i class="fas fa-times"></i>'|raw) }}</td>
+                        <td>{{ request.note }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
+{% block scripts %}
+    <script>
+        $(document).ready(function () {
+            $(document).on('click', '[name="approve"]', function () {
+                let id = $(this).data('id');
+                let button = $(this);
+                $(this).attr('disabled', true);
+                $.post("", {approve: id}, function (result) {
+                    if (result.error & 0x100) {
+                        $("#request-" + id).remove();
+                        window.open("https://edit.tosdr.org/services/" + result.message + "/annotate");
+                    } else {
+                        $(this).attr('disabled', false);
+                        alert("Error! " + result.message);
+                    }
+                });
+            });
+            $(document).on('click', '[name="reject"]', function () {
+                let id = $(this).data('id');
+                let button = $(this);
+                $(this).attr('disabled', true);
+                $.post("", {reject: id}, function (result) {
+                    if (result.error & 0x100) {
+                        $("#request-" + id).remove();
+                    } else {
+                        button.attr('disabled', false);
+                        alert("Error! " + result.message);
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,55 @@
+{# 
+ # Copyright (C) 2021 Justin René Back <justin@tosdr.org>
+ #
+ # This program is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation, either version 3 of the License, or
+ # (at your option) any later version.
+ #
+ # This program is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU General Public License for more details.
+ #
+ # You should have received a copy of the GNU General Public License
+ # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="/themes/{{ config.theme }}/css/bootstrap/bootstrap.min.css">
+            {# <link rel="stylesheet" href="/themes/{{ config.theme }}/css/jquery/jquery-ui.min.css"> #}
+            <link rel="stylesheet" href="/themes/{{ config.theme }}/css/sweetalert/sweetalert.min.css">
+            <!-- START Default Crisp CSS -->
+            <link rel="stylesheet" href="/themes/{{ config.theme }}/css/general.min.css">
+            <link rel="stylesheet" href="/themes/{{ config.theme }}/css/general.min.css">
+            <link rel="stylesheet" href="/themes/{{ config.theme }}/css/ranking-badges.min.css">
+
+            <!-- END Default Crisp CSS -->
+            <title>{{ pageTitle }} {{ config.page_delimiter }} {{ config.site_name }}</title>
+        {% endblock %}
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+        {% block footer %}
+        {% endblock %}
+    </body>
+    <script src="/themes/{{ config.theme }}/js/jquery/jquery.min.js"></script>
+    <script src="/themes/{{ config.theme }}/js/jquery/popper.min.js"></script>
+    <script src="/themes/{{ config.theme }}/js/bootstrap/bootstrap.min.js"></script>
+    {# <script src="/themes/{{ config.theme }}/js/jquery/jquery-ui.min.js"></script> #}
+    <script src="/themes/{{ config.theme }}/js/sweetalert/sweetalert.min.js"></script>
+    <script src="/themes/{{ config.theme }}/js/fontawesome/all.min.js"></script>
+
+    {% block scripts %}{% endblock %}
+    <!-- START Default Crisp JS -->
+    {% block default_scripts %}
+        <script src="/themes/{{ config.theme }}/js/crisp.min.js"></script>
+    {% endblock %}
+    <!-- END Default Crisp JS -->
+</html>

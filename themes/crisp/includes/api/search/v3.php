@@ -1,7 +1,11 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 
+=======
+/*
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 =======
 /*
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
@@ -22,6 +26,7 @@
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $inputQuery = $_GET["query"] ?? $inputQuery;
 $ES = new \crisp\api\Elastic();
 
@@ -41,11 +46,17 @@ echo \crisp\core\PluginAPI::response(\crisp\core\Bitmask::REQUEST_SUCCESS, $inpu
 ));
 
 =======
+=======
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 switch ($_SERVER["REQUEST_METHOD"]) {
     case "GET":
         require_once __DIR__ . '/GET/v3.php';
         break;
     default:
         echo \crisp\core\PluginAPI::response(crisp\core\Bitmask::NOT_IMPLEMENTED, "Invalid Request Method", [], null, 405);
+<<<<<<< HEAD
+}
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
+=======
 }
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8

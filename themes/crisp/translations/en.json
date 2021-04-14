@@ -186,7 +186,11 @@
     "views.txt.card.results.header": "I have found this",
     "views.txt.errors.invalid_line": "Error on line {{ line }}. Expected \"{{ expected }}\" but received \"{{ got }}\"",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "views.txt.errors.invalid_domain_list": "Failed to parse {{ domain }}",
+=======
+    "views.txt.errors.invalid_domain_list": "Failed to parse domain {{ domain }}",
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 =======
     "views.txt.errors.invalid_domain_list": "Failed to parse domain {{ domain }}",
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
@@ -225,7 +229,13 @@
     "components.navbar.simple.text": "Site Navigation",
     "views.txt.errors.invalid_key": "Cannot parse key \"{{ got }}\" in line {{ line }}.",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "views.txt.errors.curl_error": "CURL error trying to get {{ path }}"
+=======
+    "views.txt.errors.curl_error": "CURL error trying to get {{ path }}",
+    "views.txt.card.results.failed_validations.h5": "Failed Validations:",
+    "views.txt.card.results.result.h5": "Parsed tosdr.txt"
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 =======
     "views.txt.errors.curl_error": "CURL error trying to get {{ path }}",
     "views.txt.card.results.failed_validations.h5": "Failed Validations:",

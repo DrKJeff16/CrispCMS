@@ -69,12 +69,18 @@ if (isset($_POST["domain"])) {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     echo crisp\core\PluginAPI::response(crisp\core\Bitmask::REQUEST_SUCCESS, var_export($parsed, true));
 =======
+=======
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
     echo crisp\core\PluginAPI::response(crisp\core\Bitmask::REQUEST_SUCCESS, "OK", array(
         "results" => var_export($parsed["results"], true),
         "failed_validations" => var_export($parsed["failed_validations"], true)
     ));
+<<<<<<< HEAD
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
+=======
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
     exit;
 }

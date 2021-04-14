@@ -33,13 +33,19 @@ switch ($Interface) {
         require_once __DIR__ . '/rest-service/v1.php';
         break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
     case "v2":
         require_once __DIR__ . '/rest-service/v2.php';
         break;
     case "v3":
         require_once __DIR__ . '/rest-service/v3.php';
         break;
+<<<<<<< HEAD
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
+=======
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
     default:
         echo \crisp\core\PluginAPI::response(crisp\core\Bitmask::VERSION_NOT_FOUND, "Invalid Version", []);

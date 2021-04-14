@@ -27,7 +27,10 @@
     {{ include("components/navbar.twig") }}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
     <style>
         pre code {
             display: block;
@@ -40,6 +43,9 @@
             padding: 0;
         }
     </style>
+<<<<<<< HEAD
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
+=======
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
     <div class="jumbotron" id="api">
         <div><h1>{{ 'views.txt.title'|translate }}</h1></div>
@@ -70,9 +76,12 @@
                 </div>
                 <div class="card-body">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <pre id="result">
 
 =======
+=======
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
                     <h5>{{ 'views.txt.card.results.failed_validations.h5'|translate }}</h5>
                     <pre>
                         <code id="failed_validations" style="color: red;"></code>
@@ -80,6 +89,9 @@
                     <h5>{{ 'views.txt.card.results.result.h5'|translate }}</h5>
                     <pre>
                         <code id="result"></code>
+<<<<<<< HEAD
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
+=======
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
                     </pre>
                 </div>
@@ -95,7 +107,11 @@
         let domainIterator = 0;
         $(document).ready(function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+            hljs.highlightAll();
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 =======
             hljs.highlightAll();
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
@@ -111,7 +127,12 @@
                     }
                     if (result.error & 0x100) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $("#result").html(result.message);
+=======
+                        $("#result").html(result.parameters.results);
+                        $("#failed_validations").html(result.parameters.failed_validations);
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 =======
                         $("#result").html(result.parameters.results);
                         $("#failed_validations").html(result.parameters.failed_validations);

@@ -1,7 +1,11 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 
+=======
+/*
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 =======
 /*
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
@@ -21,6 +25,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 $opts = [
     "http" => [
@@ -49,6 +54,8 @@ if (!isset($this->Query) || empty($this->Query)) {
 
     echo \crisp\core\PluginAPI::response(\crisp\core\Bitmask::NONE, "Comparing versions", ["latest" => $Latest, "given" => $Version, "substring" => \crisp\api\Helper::startsWith($this->Query, "v"), "compare" => version_compare($Latest, $Version)]);
 =======
+=======
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 $Interface = "default";
 
 if (is_array($GLOBALS["route"]->GET)) {
@@ -64,5 +71,8 @@ switch ($Interface) {
     default:
     case "v1":
         require_once __DIR__ . '/updatecheck/v1.php';
+<<<<<<< HEAD
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
+=======
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 }

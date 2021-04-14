@@ -37,7 +37,11 @@
     "base.language.nl": "Néerlandais",
     "base.language.pl": "Polonais",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "base.language.pt_BR": "Portugais brèsilien",
+=======
+    "base.language.pt_BR": "Portugais brésilien",
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 =======
     "base.language.pt_BR": "Portugais brésilien",
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8

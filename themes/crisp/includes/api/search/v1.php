@@ -1,7 +1,11 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 
+=======
+/*
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 =======
 /*
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
@@ -21,6 +25,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 if (empty($this->Query)) {
     foreach (\crisp\api\Config::get("frontpage_services") as $ID) {
@@ -42,11 +47,17 @@ if (count($Array) > 0) {
 }
 echo \crisp\core\PluginAPI::response(\crisp\core\Bitmask::NONE, $this->Query, (array("service" => $Array, "grid" => $this->TwigTheme->render("components/servicegrid/no_service.twig", []))));
 =======
+=======
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 switch ($_SERVER["REQUEST_METHOD"]) {
     case "GET":
         require_once __DIR__ . '/GET/v1.php';
         break;
     default:
         echo \crisp\core\PluginAPI::response(crisp\core\Bitmask::NOT_IMPLEMENTED, "Invalid Request Method", [], null, 405);
+<<<<<<< HEAD
+}
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
+=======
 }
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8

@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<< HEAD
-/* 
-=======
 /*
->>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
  * Copyright (C) 2021 Justin René Back <justin@tosdr.org>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -21,7 +17,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-<<<<<<< HEAD
+
 $inputQuery = $_GET["query"] ?? $inputQuery;
 
 if (empty($inputQuery) || !isset($inputQuery)) {
@@ -48,12 +44,3 @@ echo \crisp\core\PluginAPI::response(\crisp\core\Bitmask::REQUEST_SUCCESS + cris
     "results" => count($Array),
     "service" => $Array
 )));
-=======
-switch ($_SERVER["REQUEST_METHOD"]) {
-    case "GET":
-        require_once __DIR__ . '/GET/v2.php';
-        break;
-    default:
-        echo \crisp\core\PluginAPI::response(crisp\core\Bitmask::NOT_IMPLEMENTED, "Invalid Request Method", [], null, 405);
-}
->>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8

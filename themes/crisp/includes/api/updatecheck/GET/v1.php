@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<< HEAD
-/* 
-=======
 /*
->>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
  * Copyright (C) 2021 Justin René Back <justin@tosdr.org>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -21,7 +17,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-<<<<<<< HEAD
 $opts = [
     "http" => [
         "method" => "GET",
@@ -48,21 +43,4 @@ if (!isset($this->Query) || empty($this->Query)) {
     }
 
     echo \crisp\core\PluginAPI::response(\crisp\core\Bitmask::NONE, "Comparing versions", ["latest" => $Latest, "given" => $Version, "substring" => \crisp\api\Helper::startsWith($this->Query, "v"), "compare" => version_compare($Latest, $Version)]);
-=======
-$Interface = "default";
-
-if (is_array($GLOBALS["route"]->GET)) {
-    $Interface = array_key_first($GLOBALS["route"]->GET);
-
-    $this->Query = $GLOBALS["route"]->GET[$Interface];
-    if (strpos($GLOBALS["route"]->GET[$Interface], ".json")) {
-        $this->Query = substr($this->Query, 0, -5);
-    }
-}
-
-switch ($Interface) {
-    default:
-    case "v1":
-        require_once __DIR__ . '/updatecheck/v1.php';
->>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 }

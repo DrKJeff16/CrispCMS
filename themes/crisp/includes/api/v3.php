@@ -31,7 +31,10 @@ if ($this->Query == "all") {
 
         $Service["urls"] = explode(",", $Service["url"]);
         $Service["nice_service"] = \crisp\api\Helper::filterAlphaNum($Service["name"]);
+<<<<<<< HEAD
         $Service["has_image"] = (file_exists(__DIR__ . "/../" . \crisp\api\Config::get("theme_dir") . "/" . \crisp\api\Config::get("theme") . "/img/logo/" . $Service["nice_service"] . ".svg") ? true : file_exists(__DIR__ . "/../" . \crisp\api\Config::get("theme_dir") . "/" . \crisp\api\Config::get("theme") . "/img/logo/" . $Service["nice_service"] . ".png") );
+=======
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
         $Service["logo"] = \crisp\api\Config::get("s3_logos") . "/" . $Service["id"] . ".png";
 
         $Services[$Index] = $Service;

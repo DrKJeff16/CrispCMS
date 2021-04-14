@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<< HEAD
-/* 
-=======
 /*
->>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
  * Copyright (C) 2021 Justin René Back <justin@tosdr.org>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -21,21 +17,20 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-<<<<<<< HEAD
-if ($_SERVER["REQUEST_METHOD"] !== "GET") {
-    echo \crisp\core\PluginAPI::response(crisp\core\Bitmask::NOT_IMPLEMENTED, "Invalid Request Method", [], null, 405);
-    exit;
-}
 
-$Cases = \crisp\api\Phoenix::getCasesPG((array_key_first($GLOBALS["route"]->GET) == "nocache" ? true : false));
-
-echo \crisp\core\PluginAPI::response(crisp\core\Bitmask::REQUEST_SUCCESS, "All cases below", $Cases);
-=======
 switch ($_SERVER["REQUEST_METHOD"]) {
     case "GET":
-        require_once __DIR__ . '/GET/v1.php';
+        require_once __DIR__ . '/GET/v2.php';
+        break;
+    case "POST":
+
+        if (!crisp\api\Helper::hasApiPermissions(crisp\core\APIPermissions::POST_SERVICE_REQUEST)) {
+            echo \crisp\core\PluginAPI::response(crisp\core\Bitmask::MISSING_PERMISSIONS, "Missing Permissions " . crisp\core\APIPermissions::getBitmask(crisp\core\APIPermissions::POST_SERVICE_REQUEST, true)[0], [], null, 403);
+            return;
+        }
+
+        echo \crisp\core\PluginAPI::response(crisp\core\Bitmask::NOT_IMPLEMENTED, "Not yet implemented", [], null, 405);
         break;
     default:
         echo \crisp\core\PluginAPI::response(crisp\core\Bitmask::NOT_IMPLEMENTED, "Invalid Request Method", [], null, 405);
 }
->>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8

@@ -2,7 +2,11 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 
+=======
+/*
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 =======
 /*
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
@@ -25,6 +29,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 $opts = [
@@ -56,6 +61,8 @@ if (!isset($this->Query) || empty($this->Query)) {
 =======
 =======
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
+=======
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 $Interface = "default";
 
 if (is_array($GLOBALS["route"]->GET)) {
@@ -72,6 +79,9 @@ switch ($Interface) {
     case "v1":
         require_once __DIR__ . '/updatecheck/v1.php';
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
+=======
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 =======
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8

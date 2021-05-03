@@ -2,7 +2,11 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 
+=======
+/*
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 =======
 /*
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
@@ -27,6 +31,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (empty($this->Query)) {
     foreach (\crisp\api\Config::get("frontpage_services") as $ID) {
         $Array[] = crisp\api\Phoenix::getServicePG($ID);
@@ -49,6 +54,8 @@ echo \crisp\core\PluginAPI::response(\crisp\core\Bitmask::NONE, $this->Query, (a
 =======
 =======
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
+=======
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 switch ($_SERVER["REQUEST_METHOD"]) {
     case "GET":
         require_once __DIR__ . '/GET/v1.php';
@@ -56,6 +63,10 @@ switch ($_SERVER["REQUEST_METHOD"]) {
     default:
         echo \crisp\core\PluginAPI::response(crisp\core\Bitmask::NOT_IMPLEMENTED, "Invalid Request Method", [], null, 405);
 <<<<<<< HEAD
+<<<<<<< HEAD
+}
+>>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
+=======
 }
 >>>>>>> 507d6597ea9696a56e529a04ca4501e515d611d8
 =======
